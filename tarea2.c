@@ -461,6 +461,7 @@ void BuscarPorTempo(List *ListaCanciones) { // Funcion para buscar canciones med
 
     while (Cancion != NULL) {
         if ((Cancion->Tempo >= minTempo) && (Cancion->Tempo < maxTempo)) {
+            Cont++;
             encontrada = true;
             printf("| %-13zu | %-22s | %-26s | %-26s | %-9.2f | %-10s |\n",
                     // En caso de que un dato no se encuentra o el campo este vacio se reemplaza por N/A
@@ -478,7 +479,7 @@ void BuscarPorTempo(List *ListaCanciones) { // Funcion para buscar canciones med
         printf("\n>> NO SE ENCONTRARON CANCIONES EN ESTA CATEGORIA <<\n");
     }
     else{
-        printf("SE ENCONTRARON %zu RESULTADOS PARA EL TEMPO %s", Cont, categoria);
+        printf("SE ENCONTRARON %zu RESULTADOS PARA EL TEMPO %s\n", Cont, categoria);
     }
 
     printf("______________________________________________________________________________________________________________\n");
